@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bk08" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/dynamoInfoView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+
+                    <include
+                        android:id="@+id/comm_node_info"
+                        layout="@layout/comm_node_info" />
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/dynamoControlView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="40dip"
+                        android:paddingTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/dynamoMImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:padding="16dip"
+                            android:src="@drawable/switch1" />
+
+                        <Button
+                            android:id="@+id/dynamoBtnMove"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="24dip"
+                            android:padding="20dip"
+                            android:text="正转"
+                            android:textColor="#FF0000FF"
+                            android:textSize="14dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/dynamoOImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:padding="16dip"
+                            android:src="@drawable/switch2" />
+
+                        <Button
+                            android:id="@+id/dynamoBtnOrientation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="24dip"
+                            android:padding="20dip"
+                            android:text="反转"
+                            android:textColor="#FF0000FF"
+                            android:textSize="14dip" />
+                    </LinearLayout>
+
+<!--                     <LinearLayout -->
+<!--                         android:layout_width="wrap_content" -->
+<!--                         android:layout_height="wrap_content" -->
+<!--                         android:orientation="vertical" -->
+<!--                         android:paddingTop="10dip" > -->
+
+<!--                         <ImageView -->
+<!--                             android:id="@+id/dynamoSImageView" -->
+<!--                             android:layout_width="wrap_content" -->
+<!--                             android:layout_height="wrap_content" -->
+<!--                             android:gravity="center_horizontal" -->
+<!--                             android:padding="16dip" -->
+<!--                             android:src="@drawable/switchdisable" /> -->
+
+<!--                         <Button -->
+<!--                             android:id="@+id/dynamoBtnSpeed" -->
+<!--                             android:layout_width="wrap_content" -->
+<!--                             android:layout_height="wrap_content" -->
+<!--                             android:layout_centerHorizontal="true" -->
+<!--                             android:layout_margin="24dip" -->
+<!--                             android:padding="20dip" -->
+<!--                             android:text="停止" -->
+<!--                             android:textColor="#FF0000FF" -->
+<!--                             android:textSize="14dip" /> -->
+<!--                     </LinearLayout> -->
+
+                    <!--
+                      	<LinearLayout 
+			    		android:orientation="horizontal"
+			    		android:layout_width="wrap_content"
+			    		android:layout_height="wrap_content"
+			    		android:layout_below="@id/switchConfigbtn">
+			    	
+					<TextView 
+			    		style="@style/node_comm_info_text_style" 
+			    		android:text="受控设备地址"
+			    		android:layout_width="100dip"/>
+			    		
+			    	<EditText android:id="@+id/switchCtrlDevAddrEditText"
+			    		style="@style/node_comm_info_edit_style"/>
+			 
+			    	<Button android:id="@+id/switchBtnSetCtrlDevAddr"
+			    		android:text="设置"
+			    		style="@style/button_style"/>	
+				 </LinearLayout>
+                    -->
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical" >
+
+                <TextView
+                    android:id="@+id/dynamoLogView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:maxLines="20"
+                    android:paddingLeft="20dip"
+                    android:paddingTop="10dip"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textColor="#ff0000ff"
+                    android:textSize="20dip"
+                    android:visibility="invisible" >
+                </TextView>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>
